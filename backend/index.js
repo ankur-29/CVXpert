@@ -4,21 +4,21 @@ import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-import authRoutes from './routes/auth.js';
 import resumeRoutes from './routes/resumes.js';
 import { connectDatabase } from './config/db.js';
+import userRoutes from './routes/userRoutes.js';
 
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Middleware
 app.use(cors());
 app.use(express.json());
 
-
 // Routes
-app.use('/api/auth', authRoutes);
+app.use('/api/auth', userRoutes);
 app.use('/api/resumes', resumeRoutes);
 
 app.get('/', (req, res) => {
