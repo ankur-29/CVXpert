@@ -1,1 +1,14 @@
 @import "tailwindcss";
+.primary-color {
+  color: var(--color-cyan-700);
+}
+.secondary-color {
+  color: var(--color-orange-300);
+}
+
+.bg-primary-color {
+  background-color: var(--color-cyan-700);
+}
+.bg-secondary-color {
+  background-color: var(--color-orange-300);
+}
